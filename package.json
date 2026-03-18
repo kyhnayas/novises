@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "novises-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,17 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "16.1.7",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "next": "^15.5.13",
+    "nodemailer": "^8.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.23",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
-    "tailwindcss": "^4",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
     "typescript": "^5"
   }
 }

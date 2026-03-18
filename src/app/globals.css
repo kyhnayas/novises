@@ -1,26 +1,44 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #1f2937;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
+
+p, li {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-primary text-white px-7 py-3.5 rounded-full font-semibold text-base tracking-wide transition-all duration-300 hover:bg-teal-700 hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-teal-200;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-brand-primary text-brand-primary px-7 py-3.5 rounded-full font-semibold text-base tracking-wide transition-all duration-300 hover:bg-brand-primary hover:text-white hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-teal-200;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl text-brand-dark leading-tight;
+  }
+  .section-subtitle {
+    @apply text-brand-primary font-semibold text-sm uppercase tracking-widest mb-3 block;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-8 transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+  }
+  .input-field {
+    @apply w-full border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent transition-all text-base;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0fafa; }
+::-webkit-scrollbar-thumb { background: #238b8e; border-radius: 3px; }
