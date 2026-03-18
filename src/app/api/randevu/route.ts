@@ -10,18 +10,18 @@ export async function POST(req: NextRequest) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: process.env.NODEMAILER_HOST,
-      port: Number(process.env.NODEMAILER_PORT) || 587,
-      secure: false,
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT) || 465,
+      secure: process.env.SMTP_SECURE === "true",
       auth: {
-        user: process.env.NODEMAILER_USER,
-        pass: process.env.NODEMAILER_PASS,
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"Novises Web" <${process.env.NODEMAILER_USER}>`,
-      to: process.env.MAIL_TO,
+      from: `"Novises Web" <${process.env.SMTP_FROM}>`,
+      to: process.env.SMTP_TO,
       subject: `Yeni Randevu Talebi – ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #f0fafa; padding: 32px; border-radius: 12px;">
