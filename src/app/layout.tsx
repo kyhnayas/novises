@@ -96,14 +96,7 @@ const jsonLd = {
   ],
   sameAs: [],
 };
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <Analytics />
-    </>
-  );
-}
+
 export default function RootLayout({
   children,
 }: {
@@ -122,6 +115,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -131,6 +125,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
