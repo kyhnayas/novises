@@ -49,10 +49,13 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="section-subtitle">Blog</span>
           <h1 className="section-title text-4xl md:text-5xl mb-6">
-            İşitme sağlığı hakkında<br />bilmeniz gerekenler
+            İşitme sağlığı hakkında
+            <br />
+            bilmeniz gerekenler
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl">
-            Uzman bilgiler, pratik rehberler ve işitme sağlığıyla ilgili merak ettiğiniz her şey.
+            Uzman bilgiler, pratik rehberler ve işitme sağlığıyla ilgili merak
+            ettiğiniz her şey.
           </p>
         </div>
       </section>
@@ -80,7 +83,11 @@ export default function BlogPage() {
                   <div>
                     <div className="flex items-center gap-3 text-xs text-gray-400 mb-3">
                       <time dateTime={post.date}>
-                        {new Date(post.date).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" })}
+                        {new Date(post.date).toLocaleDateString("tr-TR", {
+                          day: "numeric",
+                          month: "long",
+                          year: "numeric",
+                        })}
                       </time>
                       <span>·</span>
                       <span>{post.readTime} okuma</span>
@@ -88,7 +95,9 @@ export default function BlogPage() {
                     <h2 className="font-display text-xl text-brand-dark mb-3 group-hover:text-brand-primary transition-colors">
                       {post.title}
                     </h2>
-                    <p className="text-gray-500 text-sm leading-relaxed">{post.excerpt}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      {post.excerpt}
+                    </p>
                   </div>
                 </Link>
               </article>
