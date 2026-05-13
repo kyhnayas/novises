@@ -36,11 +36,13 @@ export default function IsitmeTestiPage() {
           <div className="max-w-3xl">
             <span className="section-subtitle">İşitme Testi & Randevu</span>
             <h1 className="section-title text-4xl md:text-5xl mb-6">
-              Ücretsiz işitme testiniz<br />için randevu alın
+              Ücretsiz işitme testiniz
+              <br />
+              için randevu alın
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Klinik düzeyinde odyometri testimiz tamamen ücretsizdir.
-              Formu doldurun, sizi en uygun vakitte arayalım.
+              Tetkiklerimizi ücretsiz olarak takip ediyor ve klinik düzeyde
+              analiz ediyoruz. Formu doldurun, sizi en uygun vakitte arayalım.
             </p>
           </div>
         </div>
@@ -51,37 +53,70 @@ export default function IsitmeTestiPage() {
           {/* Form */}
           <div>
             <div className="bg-brand-light rounded-3xl p-8 md:p-10">
-              <h2 className="font-display text-2xl text-brand-dark mb-2">Randevu Talebi</h2>
+              <h2 className="font-display text-2xl text-brand-dark mb-2">
+                Randevu Talebi
+              </h2>
               <p className="text-gray-500 text-sm mb-8">
                 Bilgilerinizi bırakın, ekibimiz sizi 1 iş günü içinde arasın.
               </p>
               <AppointmentForm />
             </div>
             <div className="mt-6 flex items-center gap-3 text-sm text-gray-500">
-              <svg className="w-4 h-4 text-brand-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              <svg
+                className="w-4 h-4 text-brand-primary shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
               </svg>
-              Bilgileriniz KVKK kapsamında güvende tutulur ve üçüncü taraflarla paylaşılmaz.
+              Bilgileriniz KVKK kapsamında güvende tutulur ve üçüncü taraflarla
+              paylaşılmaz.
             </div>
           </div>
 
           {/* Info */}
           <div className="space-y-8">
             <div>
-              <h2 className="font-display text-2xl text-brand-dark mb-4">Test nasıl yapılır?</h2>
+              <h2 className="font-display text-2xl text-brand-dark mb-4">
+                Test nasıl yapılır?
+              </h2>
               <div className="space-y-5">
                 {[
-                  { num: "1", title: "Karşılama & Anamnez", desc: "Sizi karşılıyoruz, duyma şikayetlerinizi ve geçmişinizi dinliyoruz." },
-                  { num: "2", title: "Odyometri Testi", desc: "Ses geçirmez kabinde farklı frekanslardaki seslere tepkilerinizi ölçüyoruz." },
-                  { num: "3", title: "Sonuç Değerlendirme", desc: "Audiogram sonuçlarınızı anlaşılır şekilde açıklıyoruz." },
-                  { num: "4", title: "Çözüm Önerisi", desc: "Gerekli görülürse cihaz seçeneklerini tarafsız biçimde paylaşıyoruz." },
+                  {
+                    num: "1",
+                    title: "Karşılama & Anamnez",
+                    desc: "Sizi karşılıyoruz, duyma şikayetlerinizi ve geçmişinizi dinliyoruz.",
+                  },
+                  {
+                    num: "2",
+                    title: "Odyometri Testi",
+                    desc: "Ses geçirmez kabinde farklı frekanslardaki seslere tepkilerinizi ölçüyoruz.",
+                  },
+                  {
+                    num: "3",
+                    title: "Sonuç Değerlendirme",
+                    desc: "Audiogram sonuçlarınızı anlaşılır şekilde açıklıyoruz.",
+                  },
+                  {
+                    num: "4",
+                    title: "Çözüm Önerisi",
+                    desc: "Gerekli görülürse cihaz seçeneklerini tarafsız biçimde paylaşıyoruz.",
+                  },
                 ].map((step) => (
                   <div key={step.num} className="flex gap-5">
                     <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center shrink-0 font-semibold text-brand-primary text-sm">
                       {step.num}
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-800">{step.title}</p>
+                      <p className="font-semibold text-gray-800">
+                        {step.title}
+                      </p>
                       <p className="text-gray-500 text-sm">{step.desc}</p>
                     </div>
                   </div>
@@ -101,12 +136,19 @@ export default function IsitmeTestiPage() {
 
             {/* FAQs */}
             <div>
-              <h2 className="font-display text-2xl text-brand-dark mb-5">Sık sorulan sorular</h2>
+              <h2 className="font-display text-2xl text-brand-dark mb-5">
+                Sık sorulan sorular
+              </h2>
               <div className="space-y-4">
                 {faqs.map((f) => (
-                  <div key={f.q} className="border border-gray-100 rounded-2xl p-5">
+                  <div
+                    key={f.q}
+                    className="border border-gray-100 rounded-2xl p-5"
+                  >
                     <p className="font-semibold text-gray-800 mb-2">{f.q}</p>
-                    <p className="text-gray-500 text-sm leading-relaxed">{f.a}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      {f.a}
+                    </p>
                   </div>
                 ))}
               </div>

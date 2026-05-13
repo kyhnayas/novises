@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "Novises İşitme Cihazları olarak Sakarya Adapazarı'nda işitme sağlığı alanında güvenilir ve kişisel bakım sunuyoruz. Hikayemizi öğrenin.",
+    "Novises İşitme Cihazları olarak Güçlü iş ortaklarımız, uzman ekibimiz ve hasta odaklı yaklaşımımızla Sakarya Adapazarı'nda işitme sağlığına adanmış bir merkeziz.",
   alternates: { canonical: "https://novises.com/hakkimizda" },
 };
 
@@ -39,12 +39,14 @@ export default function HakkimizdaPage() {
           <div className="max-w-3xl">
             <span className="section-subtitle">Hakkımızda</span>
             <h1 className="section-title text-4xl md:text-5xl mb-6">
-              İşitme sağlığına adanmış<br />bir ekip
+              İşitme sağlığına adanmış
+              <br />
+              bir ekip
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
               Novises İşitme Cihazları olarak Sakarya Adapazarı'nda kurulduk.
-              Amacımız sadece cihaz satmak değil; hastalarımızın hayat kalitesini
-              kalıcı olarak yükseltmek.
+              Amacımız sadece cihaz satmak değil; hastalarımızın hayat
+              kalitesini kalıcı olarak yükseltmek.
             </p>
           </div>
         </div>
@@ -63,20 +65,28 @@ export default function HakkimizdaPage() {
           </div>
           <div>
             <span className="section-subtitle">Hikayemiz</span>
-            <h2 className="section-title mb-6">Dinlemekle başlar, güvenle devam eder</h2>
+            <h2 className="section-title mb-6">
+              Dinlemekle başlar, güvenle devam eder
+            </h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Novises, işitme sağlığının yalnızca teknik bir sorun değil, aynı zamanda
-                derin bir insani ihtiyaç olduğu inancıyla kuruldu. Her hastamızın
-                yaşam öyküsü, duyma alışkanlıkları ve beklentileri birbirinden farklı.
+                Novises, işitme sağlığının yalnızca teknik bir sorun değil, aynı
+                zamanda derin bir insani ihtiyaç olduğu inancıyla kuruldu. Her
+                hastamızın yaşam öyküsü, duyma alışkanlıkları ve beklentileri
+                birbirinden farklı.
               </p>
               <p>
-                Sakarya Adapazarı Devlet Hastanesi'nin hemen karşısında, ulaşımı kolay
-                konumumuzla bölgenin işitme sağlığı ihtiyaçlarına cevap veriyoruz.
+                Sakarya Adapazarı Devlet Hastanesi'nin hemen karşısında, ulaşımı
+                kolay konumumuzla bölgenin işitme sağlığı ihtiyaçlarına cevap
+                veriyoruz.
               </p>
               <p>
-                Sloganımız boş bir söz değil: <strong className="text-brand-primary">"Sizi dinleyerek başlarız…"</strong>
-                {" "}İlk görüşmemizden cihaz takibine kadar her adımda sizi gerçekten duyuyoruz.
+                Sloganımız boş bir söz değil:{" "}
+                <strong className="text-brand-primary">
+                  "Sizi dinleyerek başlarız…"
+                </strong>{" "}
+                İlk görüşmemizden cihaz takibine kadar her adımda sizi gerçekten
+                duyuyoruz.
               </p>
             </div>
             <Link href="/isitme-testi" className="btn-primary mt-8 inline-flex">
@@ -95,8 +105,12 @@ export default function HakkimizdaPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v) => (
               <div key={v.title} className="card">
-                <h3 className="font-display text-xl text-brand-primary mb-3">{v.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
+                <h3 className="font-display text-xl text-brand-primary mb-3">
+                  {v.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {v.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -107,22 +121,50 @@ export default function HakkimizdaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="section-subtitle">Konumumuz</span>
-            <h2 className="section-title mb-6">Size yakın, her zaman erişilebilir</h2>
+            <h2 className="section-title mb-6">
+              Size yakın, her zaman erişilebilir
+            </h2>
             <p className="text-gray-600 mb-4">
-              Adapazarı Devlet Hastanesi karşısında, merkezi konumumuzla Sakarya'nın
-              her noktasından kolayca ulaşabilirsiniz.
+              Adapazarı Devlet Hastanesi karşısında, merkezi konumumuzla
+              Sakarya'nın her noktasından kolayca ulaşabilirsiniz.
             </p>
             <div className="space-y-3 text-gray-600">
               <p className="flex items-start gap-2">
-                <svg className="w-5 h-5 text-brand-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <svg
+                  className="w-5 h-5 text-brand-primary mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
                 </svg>
-                Güllük, Adnan Menderes Cd Sağlık Sk no:3 iç kapı 108, 54100 Adapazarı/Sakarya
+                Güllük, Adnan Menderes Cd Sağlık Sk no:3 iç kapı 108, 54100
+                Adapazarı/Sakarya
               </p>
               <p className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-brand-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-5 h-5 text-brand-primary shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
                 Pzt–Cum: 09:00–18:00 | Cmt: 09:00–14:00
               </p>
