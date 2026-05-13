@@ -3,7 +3,7 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/', // Gizli kalmasını istediğiniz klasör varsa buraya yazın
+      disallow: '/api/', // Gizli kalmasını istediğiniz klasör varsa buraya yazın
     },
     sitemap: 'https://novises.com/sitemap.xml',
   };
